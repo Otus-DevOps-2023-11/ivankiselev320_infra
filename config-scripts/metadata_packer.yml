@@ -1,0 +1,11 @@
+#cloud-config
+datasource:
+  Ec2:
+    strict_id: false
+ssh_pwauth: no
+users:
+  - name: appuser
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC2hS4su8hYm+fEddBwi7kEdxQJGBr4lgXsqdF3yhfhUIhV9jqKhHuGZ+UQOqU7YGVxLHL6KcCiSznRtaa830sJFJOBmdnwL9TMdqlKxIWo+/I8pYeTR5Q/vv9+GLU3DS/XRHkJIVj7IpDgtZRS2YQAyvDBdV6mbXB+chbVfmoWDVE+UbXC/D7nMBolVdQ1NHcTWJsDO6HmiC+Zvzktw7eG+fdB9l4TvdVpNn+I3uKGJlxzT+dniRN38OLs8h8TWGWfLrjObGu1rwtQ/C0Tr1oojhCEu0LErZIjbaB0AroxaOQCzkD4TmiomWFUFhCU0cMZA1fQUD7j6BFEkGY9ekGxcto2omBvU5wi91nAllUUVQNXHU+WEsT4gEh9Nl4UAZqiESAPA2hXthL7PRL2I3cKuNDWpEkppkVSMY9XXFFJhrBZUZErpiJJhLh57VQXoaNLHcaksfP1i2erio0JN/LdYy7jZgeoARfVp3gwNs+zx0B6icGvuLcxmA74/cTDrJM= kiselevivan320@gmail.com

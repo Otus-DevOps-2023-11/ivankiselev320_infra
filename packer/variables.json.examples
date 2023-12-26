@@ -1,0 +1,10 @@
+{
+  "service_account_key_file": "./service-account-key.json",
+  "folder_id": "your-folder-id",
+  "source_image_family": "source_image_family",
+  "source_image_id": "source_image_id",
+  "image_name": "image_name-{{timestamp}}",
+  "image_family": "image_family",
+  "platform_id": "your-platform-id",
+  "subnet_id": "your-subnet-id"
+}
