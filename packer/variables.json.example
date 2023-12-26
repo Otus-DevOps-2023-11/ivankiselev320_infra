@@ -1,5 +1,5 @@
 {
-  "service_account_key_file": "./service-account-key.json",
+  "service_account_key_file": "./service-account-key.json.example",
   "folder_id": "your-folder-id",
   "source_image_family": "source_image_family",
   "source_image_id": "source_image_id",
