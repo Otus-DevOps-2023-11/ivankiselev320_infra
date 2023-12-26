@@ -1,10 +1,10 @@
 {
   "service_account_key_file": "./service-account-key.json.example",
-  "folder_id": "your-folder-id",
-  "source_image_family": "source_image_family",
+  "folder_id": "folder-id",
+  "source_image_family": "ubuntu-1604-lts",
   "source_image_id": "source_image_id",
   "image_name": "image_name-{{timestamp}}",
-  "image_family": "image_family",
-  "platform_id": "your-platform-id",
-  "subnet_id": "your-subnet-id"
+  "image_family": "reddit-base",
+  "platform_id": "platform-id",
+  "subnet_id": "subnet-id"
 }
