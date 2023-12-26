@@ -65,8 +65,8 @@ testapp_port = 9292
 - Подготовлен [образ для packer](/packer/ubuntu16.json) с необходимыми зависимостями и
   скриптами [install_ruby.sh](/packer/scripts/install_ruby.sh)
   и [install_mongodb.sh](/packer/scripts/install_mongodb.sh). [Файл](/packer/service-account-key.json.example) для
-  невалидный, создан для примера и прохождения валидации теста.
-- Для ручного деплоя запускаем следующие команд:
+  авторизации невалидный, создан для примера и прохождения валидации теста.
+- Для ручного деплоя запускаем следующие команды:
 
 ```
 sudo apt install -y git
