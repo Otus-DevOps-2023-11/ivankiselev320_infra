@@ -66,6 +66,7 @@ testapp_port = 9292
   скриптами [install_ruby.sh](/packer/scripts/install_ruby.sh)
   и [install_mongodb.sh](/packer/scripts/install_mongodb.sh). [Файл](/packer/service-account-key.json.example) для
   авторизации невалидный, создан для примера и прохождения валидации теста.
+- Создан [variables_immutable.json](/packer/variables.json.example) для параметризации.
 - Для ручного деплоя запускаем следующие команды:
 
 ```
