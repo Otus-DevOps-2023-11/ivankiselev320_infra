@@ -60,3 +60,24 @@ testapp_IP = 158.160.105.103
 
 testapp_port = 9292
 
+### ДЗ №5
+
+- Подготовлен [образ для packer](/packer/ubuntu16.json) с необходимыми зависимостями и
+  скриптами [install_ruby.sh](/packer/scripts/install_ruby.sh)
+  и [install_mongodb.sh](/packer/scripts/install_mongodb.sh). [Файл](/packer/service-account-key.json.example) для
+  авторизации невалидный, создан для примера и прохождения валидации теста.
+- Создан [variables.json.example](/packer/variables.json.example) для параметризации.
+- Для ручного деплоя запускаем следующие команды:
+
+```
+sudo apt install -y git
+git clone -b monolith https://github.com/express42/reddit.git
+cd reddit && bundle install
+puma -d
+```
+
+- Подготовлен второй [образ для packer](/packer/immutable.json) со
+  скриптами [install_ruby.sh](/packer/scripts/install_ruby.sh), [install_mongodb.sh](/packer/scripts/install_mongodb.sh)
+  , [deploy.sh](/packer/scripts/deploy.sh). Само приложение запускается как [служба](/packer/files/reddit.service) при
+  загрузке ОС.
+- [Скрипт](/config-scripts/create-reddit-vm.sh) для создания инстанса с помощью yc.
