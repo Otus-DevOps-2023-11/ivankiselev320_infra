@@ -81,3 +81,10 @@ puma -d
   , [deploy.sh](/packer/scripts/deploy.sh). Само приложение запускается как [служба](/packer/files/reddit.service) при
   загрузке ОС.
 - [Скрипт](/config-scripts/create-reddit-vm.sh) для создания инстанса с помощью yc.
+
+### ДЗ №6
+
+- Создан [main.tf](terraform/main.tf) где описано создание виртуальной машины с добавление
+  скрипта [deploy.sh](terraform/files/deploy.sh) и службы [puma.service](terraform/files/puma.service)
+- Параметризованы переменные, для примера добавлен файл [terraform.tfvars.example](terraform/terraform.tfvars.example)
+- Создан [lb.tf](terraform/lb.tf) для создания балансировщика
