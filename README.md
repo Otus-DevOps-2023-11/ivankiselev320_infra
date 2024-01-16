@@ -84,7 +84,6 @@ puma -d
 
 ### ДЗ №6
 
-- Создан [main.tf](terraform/main.tf) где описано создание виртуальной машины с добавление
-  скрипта [deploy.sh](terraform/files/deploy.sh) и службы [puma.service](terraform/files/puma.service)
-- Параметризованы переменные, для примера добавлен файл [terraform.tfvars.example](terraform/terraform.tfvars.example)
-- Создан [lb.tf](terraform/lb.tf) для создания балансировщика
+- Создан main.tf где описано создание виртуальной машины с добавление скрипта deploy.sh и службы puma.service
+- Параметризованы переменные, для примера добавлен файл terraform.tfvars.example
+- Создан lb.tf для создания балансировщика
