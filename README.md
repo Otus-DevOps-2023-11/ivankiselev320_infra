@@ -84,7 +84,15 @@ puma -d
 
 ### ДЗ №6
 
-- Создан [main.tf](terraform/main.tf) где описано создание виртуальной машины с добавление
-  скрипта [deploy.sh](terraform/files/deploy.sh) и службы [puma.service](terraform/files/puma.service)
-- Параметризованы переменные, для примера добавлен файл [terraform.tfvars.example](terraform/terraform.tfvars.example)
-- Создан [lb.tf](terraform/lb.tf) для создания балансировщика
+- Создан main.tf где описано создание виртуальной машины с добавление скрипта deploy.sh и службы puma.service
+- Параметризованы переменные, для примера добавлен файл terraform.tfvars.example
+- Создан lb.tf для создания балансировщика
+
+### ДЗ №7
+
+- Созданы два образа для packer: [app.json](packer/app.json), [db.json](packer/db.json)
+- Предыщущий проект разбит на модули: [vpc](terraform/modules/vpc/main.tf), [app](terraform/modules/app/main.tf)
+  , [db](terraform/modules/db/main.tf)
+- Созданы каталоги stage и prod с описанной инфраструктурой, файлы из ./terraform удалены
+- Настроен remote backends, описано в файле [storage-bucket.tf](terraform/storage-bucket.tf) и протестирован
+- Добавлены provisioners в модули для деплоя приложения, файлы находятся в каталоге модулей

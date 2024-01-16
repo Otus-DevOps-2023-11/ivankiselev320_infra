@@ -5,3 +5,6 @@
 /terraform/.terraform/
 /terraform/.terraform.lock.hcl
 /terraform/key.json
+terraform/prod/key.json
+terraform/stage/key.json
+

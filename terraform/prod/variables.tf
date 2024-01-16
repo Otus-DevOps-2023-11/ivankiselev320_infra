@@ -28,3 +28,15 @@ variable "app_count" {
   description = "app count"
   default     = "1"
 }
+variable "app_disk_image" {
+  description = "Disk image for reddit app"
+  default     = "fd8ehhhl0p67uearc16b"
+}
+variable "db_disk_image" {
+  description = "Disk image for reddit app"
+  default     = "fd8bimueg14j9p9o4oa4"
+}
+variable "DATABASE_URL" {
+  description = "Disk image for reddit app"
+  default     = "reddit-db.ru-central1.internal"
+}

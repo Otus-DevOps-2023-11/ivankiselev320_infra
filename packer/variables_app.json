@@ -1,0 +1,10 @@
+{
+  "service_account_key_file": "./key.json",
+  "folder_id": "b1g1dm5jjnt4i9onchsq",
+  "source_image_family": "ubuntu-1604-lts",
+  "source_image_id": "fd8jamhj3p53b8bimaqu",
+  "image_name_app": "reddit-app-base",
+  "image_family": "reddit-app-base",
+  "platform_id": "standard-v1",
+  "subnet_id": "e9bvjn41rsmd92kfmejc"
+}
