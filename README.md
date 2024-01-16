@@ -93,5 +93,7 @@ puma -d
 - Созданы два образа для packer: [app.json](packer/app.json), [db.json](packer/db.json)
 - Предыщущий проект разбит на модули: [vpc](terraform/modules/vpc/main.tf), [app](terraform/modules/app/main.tf)
   , [db](terraform/modules/db/main.tf)
-- Созданы каталоги stage и prod
-- 
+- Созданы каталоги stage и prod с описанной инфраструктурой, файлы из ./terraform удалены
+- Настроен remote backends, описано в файле [storage-bucket.tf](terraform/storage-bucket.tf) и протестирован
+- Добавлены provisioners в модули для деплоя приложения, файлы находятся в каталоге модулей
+
