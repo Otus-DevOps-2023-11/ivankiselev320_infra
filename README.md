@@ -87,3 +87,11 @@ puma -d
 - Создан main.tf где описано создание виртуальной машины с добавление скрипта deploy.sh и службы puma.service
 - Параметризованы переменные, для примера добавлен файл terraform.tfvars.example
 - Создан lb.tf для создания балансировщика
+
+### ДЗ №7
+
+- Созданы два образа для packer: [app.json](packer/app.json), [db.json](packer/db.json)
+- Предыщущий проект разбит на модули: [vpc](terraform/modules/vpc/main.tf), [app](terraform/modules/app/main.tf)
+  , [db](terraform/modules/db/main.tf)
+- Созданы каталоги stage и prod
+- 
