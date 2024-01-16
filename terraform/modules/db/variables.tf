@@ -15,3 +15,7 @@ variable "subnet_id" {
 variable "private_key_path" {
   description = "Path to the private key"
 }
+variable "DATABASE_URL" {
+  description = "Disk image for reddit app"
+  default     = "reddit-db.ru-central1.internal"
+}
