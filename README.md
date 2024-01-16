@@ -96,4 +96,3 @@ puma -d
 - Созданы каталоги stage и prod с описанной инфраструктурой, файлы из ./terraform удалены
 - Настроен remote backends, описано в файле [storage-bucket.tf](terraform/storage-bucket.tf) и протестирован
 - Добавлены provisioners в модули для деплоя приложения, файлы находятся в каталоге модулей
-
