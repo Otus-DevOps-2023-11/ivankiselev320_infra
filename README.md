@@ -96,3 +96,13 @@ puma -d
 - Созданы каталоги stage и prod с описанной инфраструктурой, файлы из ./terraform удалены
 - Настроен remote backends, описано в файле [storage-bucket.tf](terraform/storage-bucket.tf) и протестирован
 - Добавлены provisioners в модули для деплоя приложения, файлы находятся в каталоге модулей
+
+### ДЗ №8
+
+- Установлен ansible
+- Создано окружение из предыдущей домашней работы с помощью terraform
+- Создан [inventory](ansible/inventory) в текстовом формате
+- Создан [inventory.yml](ansible/inventory.yml) в .yml формате
+- Создан [ansible-playbook](ansible/clone.yml)
+- Создан [скрипт](ansible/inventory.py) на python для создания файла [inventory.json](ansible/inventory.json)
+
