@@ -1,9 +1,9 @@
 terraform {
-  #  required_providers {
-  #    yandex = {
-  #      source = "yandex-cloud/yandex"
-  #    }
-  #  }
+  required_providers {
+    yandex = {
+      source = "yandex-cloud/yandex"
+    }
+  }
 }
 
 resource "yandex_compute_instance" "db" {
@@ -30,14 +30,14 @@ resource "yandex_compute_instance" "db" {
     ssh-keys = "ubuntu:${file(var.public_key_path)}"
   }
 
-  connection {
-    type        = "ssh"
-    host        = self.network_interface.0.nat_ip_address
-    user        = "ubuntu"
-    agent       = false
-    private_key = file(var.private_key_path)
-  }
-  provisioner "remote-exec" {
-    script = "../modules/db/files/db.sh"
-  }
+  #  connection {
+  #    type        = "ssh"
+  #    host        = self.network_interface.0.nat_ip_address
+  #    user        = "ubuntu"
+  #    agent       = false
+  #    private_key = file(var.private_key_path)
+  #  }
+  #  provisioner "remote-exec" {
+  #    script = "../modules/db/files/db.sh"
+  #  }
 }
