@@ -9,3 +9,4 @@ terraform/prod/key.json
 terraform/stage/key.json
 *.retry
 /ansible/vault.key
+/jdauphant.nginx/
