@@ -101,20 +101,27 @@ puma -d
 
 - Установлен ansible
 - Создано окружение из предыдущей домашней работы с помощью terraform
-- Создан [inventory](ansible/inventory) в текстовом формате
+- Создан [inventory](ansible/old/inventory) в текстовом формате
 - Создан [inventory.yml](ansible/inventory.yml) в .yml формате
-- Создан [ansible-playbook](ansible/clone.yml)
-- Создан [скрипт](ansible/inventory.py) на python для создания файла [inventory.json](ansible/inventory.json)
+- Создан [ansible-playbook](ansible/old/clone.yml)
+- Создан [скрипт](ansible/old/inventory.py) на python для создания файла [inventory.json](ansible/old/inventory.json)
 
 ### ДЗ #9
 
-- Создан плейбук с тегами [reddit_app_one_play.yml](ansible/reddit_app_one_play.yml)
-- Создан плейбук с несколькими сценариями [reddit_app_multiple_plays.yml](ansible/reddit_app_multiple_plays.yml)
-- Разбит на несколько плейбуков [app.yml](ansible/app.yml), [db.yml](ansible/db.yml), [deploy.yml](ansible/deploy.yml).
-  Включены в один плейбук [site.yml](ansible/site.yml)
+- Создан плейбук с тегами [reddit_app_one_play.yml](ansible/old/reddit_app_one_play.yml)
+- Создан плейбук с несколькими сценариями [reddit_app_multiple_plays.yml](ansible/old/reddit_app_multiple_plays.yml)
+- Разбит на несколько плейбуков [app.yml](ansible/playbooks/app.yml), [db.yml](ansible/playbooks/db.yml)
+  , [deploy.yml](ansible/playbooks/deploy.yml). Включены в один плейбук [site.yml](ansible/playbooks/site.yml)
 - Изменены образы packer для приложения [app.json](packer/app.json) и базы данных [db.json](packer/db.json) собираются с
   помощью [packer_app.yml](packer/ansible/packer_app.yml) и [packer_db.yml](packer/ansible/packer_db.yml) соответственно
-- На основе новых образов с помощью terraform и плейбука [site.yml](ansible/site.yml) созданы инстаны и деплой
+- На основе новых образов с помощью terraform и плейбука [site.yml](ansible/playbooks/site.yml) созданы инстаны и деплой
   приложения
 
+### ДЗ #10
 
+- Созданные плейбуки перенесены в отдельные роли [app](ansible/roles/app) и [db](ansible/roles/db)
+- Описаны два окружения [prod](ansible/environments/prod) и [stage](ansible/environments/stage)
+- Использована комьюнити роль для обратного прокси, в методичке указано что необходимо внести данную роль в .gitignore,
+  но тогда коммит не проходит тесты
+- Написан плейбук [users.yml](ansible/playbooks/users.yml) для создания пользователей
+- Зашифрованы данные о учетных записях в окружении с помощью Ansible Vault

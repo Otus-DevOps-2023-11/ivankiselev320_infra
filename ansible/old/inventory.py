@@ -1,8 +1,8 @@
 import json
 import os
 
-state_path = "../terraform/stage/"
-output_file = "./inventory.json"
+state_path = "../../terraform/stage/"
+output_file = "inventory.json"
 
 state_file = os.path.join(state_path, "terraform.tfstate")
 
