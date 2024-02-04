@@ -119,3 +119,9 @@ puma -d
 
 ### ДЗ #10
 
+- Созданные плейбуки перенесены в отдельные роли [app](ansible/roles/app) и [db](ansible/roles/db)
+- Описаны два окружения [prod](ansible/environments/prod) и [stage](ansible/environments/stage)
+- Использована комьюнити роль для обратного прокси, в методичке указано что необходимо внести данную роль в .gitignore,
+  но тогда коммит не проходит тесты
+- Написан плейбук [users.yml](ansible/playbooks/users.yml) для создания пользователей
+- Зашифрованы данные о учетных записях в окружении с помощью Ansible Vault
