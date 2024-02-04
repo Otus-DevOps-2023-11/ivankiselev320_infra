@@ -106,3 +106,15 @@ puma -d
 - Создан [ansible-playbook](ansible/clone.yml)
 - Создан [скрипт](ansible/inventory.py) на python для создания файла [inventory.json](ansible/inventory.json)
 
+### ДЗ #9
+
+- Создан плейбук с тегами [reddit_app_one_play.yml](ansible/reddit_app_one_play.yml)
+- Создан плейбук с несколькими сценариями [reddit_app_multiple_plays.yml](ansible/reddit_app_multiple_plays.yml)
+- Разбит на несколько плейбуков [app.yml](ansible/app.yml), [db.yml](ansible/db.yml), [deploy.yml](ansible/deploy.yml).
+  Включены в один плейбук [site.yml](ansible/site.yml)
+- Изменены образы packer для приложения [app.json](packer/app.json) и базы данных [db.json](packer/db.json) собираются с
+  помощью [packer_app.yml](packer/ansible/packer_app.yml) и [packer_db.yml](packer/ansible/packer_db.yml) соответственно
+- На основе новых образов с помощью terraform и плейбука [site.yml](ansible/site.yml) созданы инстаны и деплой
+  приложения
+
+
