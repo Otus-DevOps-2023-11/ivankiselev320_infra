@@ -130,10 +130,9 @@ puma -d
 
 - Установлен Vagrant и зависимости
 - Создан [Vagrant](ansible/Vagrantfile) файл описывающий инфраструктуру, так же добавлен провижинер ансибл
+- добавлен плейбук [base.yml](ansible/playbooks/base.yml)
 - Переделаны плейбук [site.yml](ansible/playbooks/site.yml) и роли [db.yml](ansible/roles/db/tasks/main.yml), [app.yml](ansible/roles/app/tasks/main.yml)
 - Описан тест db для проверки запущен ли сервис, есть ли конфиг файл, так же добавлен тест доступности по порту [test_default.py](ansible/roles/db/molecule/default/tests/test_default.py)
-- 
-
 
 ### ДЗ #16
 
